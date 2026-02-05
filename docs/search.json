@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Portafolio Python",
+    "section": "",
+    "text": "Este es un portafolio escolar desarrollado como parte de la\nMaestría en Ciencia de Datos Aplicada.\nAquí documento proyectos en Python, análisis de datos y visualizaciones, con enfoque académico y reproducible."
+  },
+  {
+    "objectID": "index.html#bienvenids",
+    "href": "index.html#bienvenids",
+    "title": "Portafolio Python",
+    "section": "",
+    "text": "Este es un portafolio escolar desarrollado como parte de la\nMaestría en Ciencia de Datos Aplicada.\nAquí documento proyectos en Python, análisis de datos y visualizaciones, con enfoque académico y reproducible."
+  },
+  {
+    "objectID": "index.html#proyectos",
+    "href": "index.html#proyectos",
+    "title": "Portafolio Python",
+    "section": "🧩 Proyectos",
+    "text": "🧩 Proyectos\n\n🛸 Análisis de avistamientos UFO\nLimpieza, exploración y visualización de datos.\n🐧 Penguins Dataset\nEstadística descriptiva y gráficos con Python.\n\n(Próximamente más proyectos)"
+  }
+]

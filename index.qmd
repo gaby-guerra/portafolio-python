@@ -1,0 +1,23 @@
+---
+title: "Portafolio Python"
+---
+
+## 👋 Bienvenid@s
+
+Este es un **portafolio escolar** desarrollado como parte de la  
+**Maestría en Ciencia de Datos Aplicada**.
+
+Aquí documento proyectos en **Python**, análisis de datos y visualizaciones,
+con enfoque académico y reproducible.
+
+---
+
+## 🧩 Proyectos {#proyectos}
+
+- 🛸 **Análisis de avistamientos UFO**  
+  Limpieza, exploración y visualización de datos.
+
+- 🐧 **Penguins Dataset**  
+  Estadística descriptiva y gráficos con Python.
+
+*(Próximamente más proyectos)*

@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Portafolio Python"
+  description: "Portafolio escolar — Maestría en Ciencia de Datos Aplicada"
+  navbar:
+    left:
+      - text: Inicio
+        href: index.qmd
+      - text: Proyectos
+        href: index.qmd#proyectos
+      - text: Acerca de
+        href: about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+
+
+
