@@ -1,1 +1,29 @@
 /* css styles */
+.project-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-btn {
+  display: block;
+  padding: 1.2rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #f9fafb;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.project-btn:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.project-btn span {
+  font-size: 0.9rem;
+  color: #4b5563;
+}

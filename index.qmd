@@ -14,10 +14,18 @@ con enfoque académico y reproducible.
 
 ## 🧩 Proyectos {#proyectos}
 
-- 🛸 **Análisis de avistamientos UFO**  
-  Limpieza, exploración y visualización de datos.
+<div class="project-buttons">
 
-- 🐧 **Penguins Dataset**  
-  Estadística descriptiva y gráficos con Python.
+<a class="project-btn" href="proyectos/ufo.html">
+🛸 <strong>Análisis de avistamientos UFO</strong><br/>
+<span>Limpieza, exploración y visualización de datos</span>
+</a>
 
-*(Próximamente más proyectos)*
+<a class="project-btn" href="proyectos/penguins.html">
+🐧 <strong>Penguins Dataset</strong><br/>
+<span>Estadística descriptiva y gráficos con Python</span>
+</a>
+
+</div>
+
+<p><em>(Próximamente más proyectos)</em></p>
