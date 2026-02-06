@@ -1,0 +1,16 @@
+---
+title: "Proyecto UFO"
+---
+
+## Objetivo
+#(Describe qué analizaste y por qué)
+
+## Dataset
+#(Fuente, tamaño, columnas)
+
+## Hallazgos
+#- Punto 1
+#- Punto 2
+
+## Visualizaciones
+#(Aquí luego metemos tus gráficas)

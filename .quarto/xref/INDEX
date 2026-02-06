@@ -4,5 +4,11 @@
   },
   "about.qmd": {
     "about.html": "65671691"
+  },
+  "proyectos/penguins.qmd": {
+    "penguins.html": "c7f9f691"
+  },
+  "proyectos/ufo.qmd": {
+    "ufo.html": "42e37010"
   }
 }

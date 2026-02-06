@@ -7,6 +7,41 @@
     "text": "About this site"
   },
   {
+    "objectID": "proyectos/penguins.html",
+    "href": "proyectos/penguins.html",
+    "title": "Proyecto UFO",
+    "section": "",
+    "text": "#(Describe qué analizaste y por qué)"
+  },
+  {
+    "objectID": "proyectos/penguins.html#objetivo",
+    "href": "proyectos/penguins.html#objetivo",
+    "title": "Proyecto UFO",
+    "section": "",
+    "text": "#(Describe qué analizaste y por qué)"
+  },
+  {
+    "objectID": "proyectos/penguins.html#dataset",
+    "href": "proyectos/penguins.html#dataset",
+    "title": "Proyecto UFO",
+    "section": "Dataset",
+    "text": "Dataset\n#(Fuente, tamaño, columnas)"
+  },
+  {
+    "objectID": "proyectos/penguins.html#hallazgos",
+    "href": "proyectos/penguins.html#hallazgos",
+    "title": "Proyecto UFO",
+    "section": "Hallazgos",
+    "text": "Hallazgos\n#- Punto 1 #- Punto 2"
+  },
+  {
+    "objectID": "proyectos/penguins.html#visualizaciones",
+    "href": "proyectos/penguins.html#visualizaciones",
+    "title": "Proyecto UFO",
+    "section": "Visualizaciones",
+    "text": "Visualizaciones\n#(Aquí luego metemos tus gráficas)"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Portafolio Python",
