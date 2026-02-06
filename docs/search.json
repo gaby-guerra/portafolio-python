@@ -7,39 +7,25 @@
     "text": "About this site"
   },
   {
-    "objectID": "proyectos/penguins.html",
-    "href": "proyectos/penguins.html",
-    "title": "Proyecto UFO",
+    "objectID": "proyectos/ufo.html",
+    "href": "proyectos/ufo.html",
+    "title": "Análisis de avistamientos UFO",
     "section": "",
-    "text": "#(Describe qué analizaste y por qué)"
+    "text": "Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante técnicas de limpieza de datos, análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos utilizando Python."
   },
   {
-    "objectID": "proyectos/penguins.html#objetivo",
-    "href": "proyectos/penguins.html#objetivo",
-    "title": "Proyecto UFO",
+    "objectID": "proyectos/ufo.html#objetivo",
+    "href": "proyectos/ufo.html#objetivo",
+    "title": "Análisis de avistamientos UFO",
     "section": "",
-    "text": "#(Describe qué analizaste y por qué)"
+    "text": "Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante técnicas de limpieza de datos, análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos utilizando Python."
   },
   {
-    "objectID": "proyectos/penguins.html#dataset",
-    "href": "proyectos/penguins.html#dataset",
-    "title": "Proyecto UFO",
-    "section": "Dataset",
-    "text": "Dataset\n#(Fuente, tamaño, columnas)"
-  },
-  {
-    "objectID": "proyectos/penguins.html#hallazgos",
-    "href": "proyectos/penguins.html#hallazgos",
-    "title": "Proyecto UFO",
-    "section": "Hallazgos",
-    "text": "Hallazgos\n#- Punto 1 #- Punto 2"
-  },
-  {
-    "objectID": "proyectos/penguins.html#visualizaciones",
-    "href": "proyectos/penguins.html#visualizaciones",
-    "title": "Proyecto UFO",
-    "section": "Visualizaciones",
-    "text": "Visualizaciones\n#(Aquí luego metemos tus gráficas)"
+    "objectID": "proyectos/ufo.html#dataset",
+    "href": "proyectos/ufo.html#dataset",
+    "title": "Análisis de avistamientos UFO",
+    "section": "📊 Dataset",
+    "text": "📊 Dataset\n\nFuente: National UFO Reporting Center (NUFORC)\nFormato: CSV\nRegistros: +80,000 avistamientos reportados\nVariables principales:\n\nFecha del avistamiento\nCiudad, estado y país\nForma del objeto\nDuración\nDescripción del testigo\n\n\nEl dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.\n\nVista previa de los datos\nimport pandas as pd\ndf = pd.read_csv(“data/ufo.csv”) df.head()"
   },
   {
     "objectID": "index.html",

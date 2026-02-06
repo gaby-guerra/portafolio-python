@@ -1,3 +1,36 @@
 ---
-title: "Proyecto Penguins"
+title: "Análisis de avistamientos UFO"
 ---
+
+## 🎯 Objetivo
+
+Analizar registros históricos de avistamientos de objetos voladores no
+identificados (UFOs) mediante técnicas de limpieza de datos, análisis
+exploratorio y visualización, con el fin de identificar patrones temporales
+y geográficos utilizando Python.
+
+## 📊 Dataset
+
+- **Fuente:** National UFO Reporting Center (NUFORC)
+- **Formato:** CSV
+- **Registros:** +80,000 avistamientos reportados
+- **Variables principales:**
+  - Fecha del avistamiento
+  - Ciudad, estado y país
+  - Forma del objeto
+  - Duración
+  - Descripción del testigo
+
+El dataset contiene reportes voluntarios recopilados a lo largo de varias
+décadas, por lo que fue necesario realizar procesos de limpieza y
+normalización antes del análisis.
+
+### Vista previa de los datos
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("data/ufo.csv")
+df.head()
+
+

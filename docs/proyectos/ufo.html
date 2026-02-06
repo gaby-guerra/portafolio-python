@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto Penguins – Portafolio Python</title>
+<title>Análisis de avistamientos UFO – Portafolio Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proyecto Penguins</h1>
+<h1 class="title">Análisis de avistamientos UFO</h1>
 </div>
 
 
@@ -136,8 +136,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">🎯 Objetivo</h2>
+<p>Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante técnicas de limpieza de datos, análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos utilizando Python.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">📊 Dataset</h2>
+<ul>
+<li><strong>Fuente:</strong> National UFO Reporting Center (NUFORC)</li>
+<li><strong>Formato:</strong> CSV</li>
+<li><strong>Registros:</strong> +80,000 avistamientos reportados</li>
+<li><strong>Variables principales:</strong>
+<ul>
+<li>Fecha del avistamiento</li>
+<li>Ciudad, estado y país</li>
+<li>Forma del objeto</li>
+<li>Duración</li>
+<li>Descripción del testigo</li>
+</ul></li>
+</ul>
+<p>El dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.</p>
+<section id="vista-previa-de-los-datos" class="level3">
+<h3 class="anchored" data-anchor-id="vista-previa-de-los-datos">Vista previa de los datos</h3>
+<p>import pandas as pd</p>
+<p>df = pd.read_csv(“data/ufo.csv”) df.head()</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
