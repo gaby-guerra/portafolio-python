@@ -30,7 +30,8 @@ normalización antes del análisis.
 ```{python}
 import pandas as pd
 
-df = pd.read_csv("data/ufo.csv")
+df = pd.read_csv("../data/ufo.csv")
+
 df.head()
 
 

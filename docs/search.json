@@ -25,7 +25,7 @@
     "href": "proyectos/ufo.html#dataset",
     "title": "Análisis de avistamientos UFO",
     "section": "📊 Dataset",
-    "text": "📊 Dataset\n\nFuente: National UFO Reporting Center (NUFORC)\nFormato: CSV\nRegistros: +80,000 avistamientos reportados\nVariables principales:\n\nFecha del avistamiento\nCiudad, estado y país\nForma del objeto\nDuración\nDescripción del testigo\n\n\nEl dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.\n\nVista previa de los datos\nimport pandas as pd\ndf = pd.read_csv(“data/ufo.csv”) df.head()"
+    "text": "📊 Dataset\n\nFuente: National UFO Reporting Center (NUFORC)\nFormato: CSV\nRegistros: +80,000 avistamientos reportados\nVariables principales:\n\nFecha del avistamiento\nCiudad, estado y país\nForma del objeto\nDuración\nDescripción del testigo\n\n\nEl dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.\n\nVista previa de los datos\nimport pandas as pd\ndf = pd.read_csv(“../data/ufo.csv”)\ndf.head()"
   },
   {
     "objectID": "index.html",
