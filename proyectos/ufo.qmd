@@ -28,10 +28,11 @@ normalización antes del análisis.
 ### Vista previa de los datos
 
 ```{python}
+
 import pandas as pd
 
 df = pd.read_csv("../data/ufo.csv")
 
 df.head()
-
+```
 

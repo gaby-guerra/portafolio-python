@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "proyectos/ufo.html",
     "href": "proyectos/ufo.html",
     "title": "Análisis de avistamientos UFO",
@@ -25,7 +18,7 @@
     "href": "proyectos/ufo.html#dataset",
     "title": "Análisis de avistamientos UFO",
     "section": "📊 Dataset",
-    "text": "📊 Dataset\n\nFuente: National UFO Reporting Center (NUFORC)\nFormato: CSV\nRegistros: +80,000 avistamientos reportados\nVariables principales:\n\nFecha del avistamiento\nCiudad, estado y país\nForma del objeto\nDuración\nDescripción del testigo\n\n\nEl dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.\n\nVista previa de los datos\nimport pandas as pd\ndf = pd.read_csv(“../data/ufo.csv”)\ndf.head()"
+    "text": "📊 Dataset\n\nFuente: National UFO Reporting Center (NUFORC)\nFormato: CSV\nRegistros: +80,000 avistamientos reportados\nVariables principales:\n\nFecha del avistamiento\nCiudad, estado y país\nForma del objeto\nDuración\nDescripción del testigo\n\n\nEl dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.\n\nVista previa de los datos\n\nimport pandas as pd\n\ndf = pd.read_csv(\"../data/ufo.csv\")\n\ndf.head()\n\nC:\\Users\\gabyg\\AppData\\Local\\Temp\\ipykernel_16248\\2015269378.py:3: DtypeWarning: Columns (0: duration (seconds), 1: latitude) have mixed types. Specify dtype option on import or set low_memory=False.\n  df = pd.read_csv(\"../data/ufo.csv\")\n\n\n\n\n\n\n\n\n\ndatetime\ncity\nstate\ncountry\nshape\nduration (seconds)\nduration (hours/min)\ncomments\ndate posted\nlatitude\nlongitude\n\n\n\n\n0\n10/10/1949 20:30\nsan marcos\ntx\nus\ncylinder\n2700\n45 minutes\nThis event took place in early fall around 194...\n4/27/2004\n29.8830556\n-97.941111\n\n\n1\n10/10/1949 21:00\nlackland afb\ntx\nNaN\nlight\n7200\n1-2 hrs\n1949 Lackland AFB&#44 TX.  Lights racing acros...\n12/16/2005\n29.38421\n-98.581082\n\n\n2\n10/10/1955 17:00\nchester (uk/england)\nNaN\ngb\ncircle\n20\n20 seconds\nGreen/Orange circular disc over Chester&#44 En...\n1/21/2008\n53.2\n-2.916667\n\n\n3\n10/10/1956 21:00\nedna\ntx\nus\ncircle\n20\n1/2 hour\nMy older brother and twin sister were leaving ...\n1/17/2004\n28.9783333\n-96.645833\n\n\n4\n10/10/1960 20:00\nkaneohe\nhi\nus\nlight\n900\n15 minutes\nAS a Marine 1st Lt. flying an FJ4B fighter/att...\n1/22/2004\n21.4180556\n-157.803611"
   },
   {
     "objectID": "index.html",
@@ -47,5 +40,12 @@
     "title": "Portafolio Python",
     "section": "🧩 Proyectos",
     "text": "🧩 Proyectos\n\n 🛸 Análisis de avistamientos UFO Limpieza, exploración y visualización de datos \n 🐧 Penguins Dataset Estadística descriptiva y gráficos con Python \n\n\n(Próximamente más proyectos)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]
