@@ -1,0 +1,69 @@
+---
+title: "Gráfica animada de ventas"
+format:
+  html:
+    toc: true
+    theme: cosmo
+execute:
+  echo: false
+---
+
+Este proyecto muestra como se pueden visualizar periodos de ventas para presentaciones ejecutivas
+
+```{python}
+import pandas as pd
+import plotly.express as px
+
+data = pd.read_excel("../data/ventas.xlsx")
+
+data.head()
+
+data.tail()
+
+
+# Gráfica interactiva por mes
+
+# Generamos la columna anio_mes
+data['fecha'] = pd.to_datetime(data['fecha'])
+data['anio_mes'] = data['fecha'].dt.to_period('M')
+
+
+
+# Agrupamos los datos
+#agrupado = data.groupby(['tienda', 'anio_mes']).precio.sum().to_frame()
+
+# Reset de los indices
+#agrupado.reset_index(inplace=True)
+
+# Se puede agrupar sin el frame
+agrupado = (
+    data
+    .groupby(['tienda', 'anio_mes'], as_index=False)['precio']
+    .sum()
+)
+
+#ordenamos los periodos y las tiendas
+agrupado = agrupado.sort_values('anio_mes')
+orden_tiendas = sorted(agrupado['tienda'].unique())
+
+
+# Creando una columna con el valor acumulado
+agrupado['acumulado'] = agrupado.groupby('tienda').precio.cumsum()
+
+#Generar gráfico
+graf = px.bar(agrupado,
+              x = 'acumulado',
+              y = 'tienda',
+              color = 'tienda',
+              text_auto = True,
+              range_x = [0,160000],
+              animation_frame = 'anio_mes',
+              category_orders = {'tienda': orden_tiendas},
+              labels={
+                'anio_mes': 'Mes - Año',
+                'precio': 'Ventas (USD)',
+                'tienda': 'Tiendas'
+              }
+)
+graf.show()
+```

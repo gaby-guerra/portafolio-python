@@ -1,13 +1,18 @@
 ---
 title: "Análisis de avistamientos UFO"
+format:
+  html:
+    toc: true
+    theme: cosmo
+execute:
+  echo: false
 ---
 
 ## 🎯 Objetivo
 
 Analizar registros históricos de avistamientos de objetos voladores no
-identificados (UFOs) mediante técnicas de limpieza de datos, análisis
-exploratorio y visualización, con el fin de identificar patrones temporales
-y geográficos utilizando Python.
+identificados (UFOs) mediante análisis exploratorio y visualización, 
+con el fin de identificar patrones temporales y geográficos.
 
 ## 📊 Dataset
 
@@ -21,9 +26,23 @@ y geográficos utilizando Python.
   - Duración
   - Descripción del testigo
 
-El dataset contiene reportes voluntarios recopilados a lo largo de varias
+
+<!-- El dataset contiene reportes voluntarios recopilados a lo largo de varias
 décadas, por lo que fue necesario realizar procesos de limpieza y
 normalización antes del análisis.
+-->
+
+Se detectaron tipos mixtos en columnas numéricas. 
+Es posible realizar la limpieza explícita y conversión controlada de datos.
+Usando la siguiente sintaxys
+
+```{python}
+#| echo: true
+#| eval: false
+
+df["duration (seconds)"] = pd.to_numeric(df["duration (seconds)"], errors="coerce")
+df["latitude"] = pd.to_numeric(df["latitude"], errors="coerce")
+```
 
 ### Vista previa de los datos
 
@@ -31,8 +50,18 @@ normalización antes del análisis.
 
 import pandas as pd
 
-df = pd.read_csv("../data/ufo.csv")
+df = pd.read_csv("../data/ufo.csv", low_memory=False)
+
+df["duration (seconds)"] = pd.to_numeric(
+    df["duration (seconds)"], errors="coerce"
+)
+
+df["latitude"] = pd.to_numeric(
+    df["latitude"], errors="coerce"
+)
+
 
 df.head()
+
 ```
 

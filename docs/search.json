@@ -4,21 +4,21 @@
     "href": "proyectos/ufo.html",
     "title": "Análisis de avistamientos UFO",
     "section": "",
-    "text": "Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante técnicas de limpieza de datos, análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos utilizando Python."
+    "text": "Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos."
   },
   {
     "objectID": "proyectos/ufo.html#objetivo",
     "href": "proyectos/ufo.html#objetivo",
     "title": "Análisis de avistamientos UFO",
     "section": "",
-    "text": "Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante técnicas de limpieza de datos, análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos utilizando Python."
+    "text": "Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos."
   },
   {
     "objectID": "proyectos/ufo.html#dataset",
     "href": "proyectos/ufo.html#dataset",
     "title": "Análisis de avistamientos UFO",
     "section": "📊 Dataset",
-    "text": "📊 Dataset\n\nFuente: National UFO Reporting Center (NUFORC)\nFormato: CSV\nRegistros: +80,000 avistamientos reportados\nVariables principales:\n\nFecha del avistamiento\nCiudad, estado y país\nForma del objeto\nDuración\nDescripción del testigo\n\n\nEl dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.\n\nVista previa de los datos\n\nimport pandas as pd\n\ndf = pd.read_csv(\"../data/ufo.csv\")\n\ndf.head()\n\nC:\\Users\\gabyg\\AppData\\Local\\Temp\\ipykernel_16248\\2015269378.py:3: DtypeWarning: Columns (0: duration (seconds), 1: latitude) have mixed types. Specify dtype option on import or set low_memory=False.\n  df = pd.read_csv(\"../data/ufo.csv\")\n\n\n\n\n\n\n\n\n\ndatetime\ncity\nstate\ncountry\nshape\nduration (seconds)\nduration (hours/min)\ncomments\ndate posted\nlatitude\nlongitude\n\n\n\n\n0\n10/10/1949 20:30\nsan marcos\ntx\nus\ncylinder\n2700\n45 minutes\nThis event took place in early fall around 194...\n4/27/2004\n29.8830556\n-97.941111\n\n\n1\n10/10/1949 21:00\nlackland afb\ntx\nNaN\nlight\n7200\n1-2 hrs\n1949 Lackland AFB&#44 TX.  Lights racing acros...\n12/16/2005\n29.38421\n-98.581082\n\n\n2\n10/10/1955 17:00\nchester (uk/england)\nNaN\ngb\ncircle\n20\n20 seconds\nGreen/Orange circular disc over Chester&#44 En...\n1/21/2008\n53.2\n-2.916667\n\n\n3\n10/10/1956 21:00\nedna\ntx\nus\ncircle\n20\n1/2 hour\nMy older brother and twin sister were leaving ...\n1/17/2004\n28.9783333\n-96.645833\n\n\n4\n10/10/1960 20:00\nkaneohe\nhi\nus\nlight\n900\n15 minutes\nAS a Marine 1st Lt. flying an FJ4B fighter/att...\n1/22/2004\n21.4180556\n-157.803611"
+    "text": "📊 Dataset\n\nFuente: National UFO Reporting Center (NUFORC)\nFormato: CSV\nRegistros: +80,000 avistamientos reportados\nVariables principales:\n\nFecha del avistamiento\nCiudad, estado y país\nForma del objeto\nDuración\nDescripción del testigo\n\n\n\nSe detectaron tipos mixtos en columnas numéricas. Es posible realizar la limpieza explícita y conversión controlada de datos. Usando la siguiente sintaxys\n\ndf[\"duration (seconds)\"] = pd.to_numeric(df[\"duration (seconds)\"], errors=\"coerce\")\ndf[\"latitude\"] = pd.to_numeric(df[\"latitude\"], errors=\"coerce\")\n\n\nVista previa de los datos\n\n\n\n\n\n\n\n\n\ndatetime\ncity\nstate\ncountry\nshape\nduration (seconds)\nduration (hours/min)\ncomments\ndate posted\nlatitude\nlongitude\n\n\n\n\n0\n10/10/1949 20:30\nsan marcos\ntx\nus\ncylinder\n2700.0\n45 minutes\nThis event took place in early fall around 194...\n4/27/2004\n29.883056\n-97.941111\n\n\n1\n10/10/1949 21:00\nlackland afb\ntx\nNaN\nlight\n7200.0\n1-2 hrs\n1949 Lackland AFB&#44 TX.  Lights racing acros...\n12/16/2005\n29.384210\n-98.581082\n\n\n2\n10/10/1955 17:00\nchester (uk/england)\nNaN\ngb\ncircle\n20.0\n20 seconds\nGreen/Orange circular disc over Chester&#44 En...\n1/21/2008\n53.200000\n-2.916667\n\n\n3\n10/10/1956 21:00\nedna\ntx\nus\ncircle\n20.0\n1/2 hour\nMy older brother and twin sister were leaving ...\n1/17/2004\n28.978333\n-96.645833\n\n\n4\n10/10/1960 20:00\nkaneohe\nhi\nus\nlight\n900.0\n15 minutes\nAS a Marine 1st Lt. flying an FJ4B fighter/att...\n1/22/2004\n21.418056\n-157.803611"
   },
   {
     "objectID": "index.html",
@@ -39,7 +39,7 @@
     "href": "index.html#proyectos",
     "title": "Portafolio Python",
     "section": "🧩 Proyectos",
-    "text": "🧩 Proyectos\n\n 🛸 Análisis de avistamientos UFO Limpieza, exploración y visualización de datos \n 🐧 Penguins Dataset Estadística descriptiva y gráficos con Python \n\n\n(Próximamente más proyectos)"
+    "text": "🧩 Proyectos\n\n 🛸 Análisis de avistamientos UFO Limpieza, exploración y visualización de datos \n 📊 Gráfica animada de ventas Manejo de gráficos para presentaciones ejecutivas \n 📊 Análisis de Ventas — Ranking Anual Gráfica con Ranking Anual \n\n\n\n(Próximamente más proyectos)"
   },
   {
     "objectID": "about.html",
@@ -47,5 +47,47 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "proyectos/animacion_anual.html",
+    "href": "proyectos/animacion_anual.html",
+    "title": "Análisis de Ventas — Ranking Anual",
+    "section": "",
+    "text": "Este proyecto analiza ventas en dólares durante tres años, con un Ranking anual animado por tienda\n“Hallazgos clave”\n\nLa tienda 4 lidero en 2022 y 2023, mientras que la tienda 6 lidero en 2026\nLa tienda 6 fue la de menores ventas en 2022 y supero a todas en 2026\nLa tienda 2 es la que menores ganancias esta produciendo"
+  },
+  {
+    "objectID": "proyectos/proyecto_03.html",
+    "href": "proyectos/proyecto_03.html",
+    "title": "Cargar datos desde un archivo de excel",
+    "section": "",
+    "text": "#!pip install pandas\n#!pip install openpyxl\n#!pip install plotly\n#!pip install nbformat\nimport pandas as pd\nimport plotly.express as px\npd.read_excel(\"ventas.xlsx\")\n\n\n\n\n\n\n\n\nregion\nfecha\ntienda\nCiudad\nPaís\ntamaño\nlocal_consumo\nprecio\nforma_pago\n\n\n\n\n0\nPED1994\n2022-01-01\nTienda 4\nGuadalajara\nMéxico\n300ml\nConsumo en tienda\n5\nEfectivo\n\n\n1\nPED2246\n2022-01-01\nTienda 6\nSantiago de Chile\nChile\n500ml\nConsumo en tienda\n11\nDébito\n\n\n2\nPED3876\n2022-01-01\nTienda 3\nBogotá\nColombia\n300ml\nDelivery\n7\nCrédito\n\n\n3\nPED4352\n2022-01-01\nTienda 1\nBuenos Aires\nArgentina\n1000ml\nConsumo en tienda\n7\nDébito\n\n\n4\nPED8633\n2022-01-01\nTienda 5\nCiudad de México\nMéxico\n200ml\nDelivery\n9\nCrédito\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n69995\nPED67084\n2024-12-31\nTienda 6\nSantiago de Chile\nChile\n500ml\nConsumo en tienda\n11\nCrédito\n\n\n69996\nPED67857\n2024-12-31\nTienda 3\nBogotá\nColombia\n200ml\nConsumo en tienda\n7\nNequi\n\n\n69997\nPED69171\n2024-12-31\nTienda 4\nGuadalajara\nMéxico\n500ml\nConsumo en tienda\n5\nEfectivo\n\n\n69998\nPED69229\n2024-12-31\nTienda 4\nGuadalajara\nMéxico\n300ml\nConsumo en tienda\n9\nNequi\n\n\n69999\nPED69356\n2024-12-31\nTienda 1\nBuenos Aires\nArgentina\n300ml\nDelivery\n9\nNequi\n\n\n\n\n70000 rows × 9 columns"
+  },
+  {
+    "objectID": "proyectos/proyecto_03.html#primeros-datos-de-la-serie-de-datos",
+    "href": "proyectos/proyecto_03.html#primeros-datos-de-la-serie-de-datos",
+    "title": "Cargar datos desde un archivo de excel",
+    "section": "Primeros datos de la serie de datos",
+    "text": "Primeros datos de la serie de datos\n\ndata = pd.read_excel(\"ventas.xlsx\")\n\ndata.head()\n\n\n\n\n\n\n\n\nregion\nfecha\ntienda\nCiudad\nPaís\ntamaño\nlocal_consumo\nprecio\nforma_pago\n\n\n\n\n0\nPED1994\n2022-01-01\nTienda 4\nGuadalajara\nMéxico\n300ml\nConsumo en tienda\n5\nEfectivo\n\n\n1\nPED2246\n2022-01-01\nTienda 6\nSantiago de Chile\nChile\n500ml\nConsumo en tienda\n11\nDébito\n\n\n2\nPED3876\n2022-01-01\nTienda 3\nBogotá\nColombia\n300ml\nDelivery\n7\nCrédito\n\n\n3\nPED4352\n2022-01-01\nTienda 1\nBuenos Aires\nArgentina\n1000ml\nConsumo en tienda\n7\nDébito\n\n\n4\nPED8633\n2022-01-01\nTienda 5\nCiudad de México\nMéxico\n200ml\nDelivery\n9\nCrédito"
+  },
+  {
+    "objectID": "proyectos/proyecto_03.html#ultimos-datos-de-la-serie-de-datos",
+    "href": "proyectos/proyecto_03.html#ultimos-datos-de-la-serie-de-datos",
+    "title": "Cargar datos desde un archivo de excel",
+    "section": "Ultimos datos de la serie de datos",
+    "text": "Ultimos datos de la serie de datos\n\ndata.tail()\n\n\n\n\n\n\n\n\nregion\nfecha\ntienda\nCiudad\nPaís\ntamaño\nlocal_consumo\nprecio\nforma_pago\n\n\n\n\n69995\nPED67084\n2024-12-31\nTienda 6\nSantiago de Chile\nChile\n500ml\nConsumo en tienda\n11\nCrédito\n\n\n69996\nPED67857\n2024-12-31\nTienda 3\nBogotá\nColombia\n200ml\nConsumo en tienda\n7\nNequi\n\n\n69997\nPED69171\n2024-12-31\nTienda 4\nGuadalajara\nMéxico\n500ml\nConsumo en tienda\n5\nEfectivo\n\n\n69998\nPED69229\n2024-12-31\nTienda 4\nGuadalajara\nMéxico\n300ml\nConsumo en tienda\n9\nNequi\n\n\n69999\nPED69356\n2024-12-31\nTienda 1\nBuenos Aires\nArgentina\n300ml\nDelivery\n9\nNequi"
+  },
+  {
+    "objectID": "proyectos/proyecto_03.html#traemos-solo-los-datos-de-una-columna",
+    "href": "proyectos/proyecto_03.html#traemos-solo-los-datos-de-una-columna",
+    "title": "Cargar datos desde un archivo de excel",
+    "section": "Traemos solo los datos de una columna",
+    "text": "Traemos solo los datos de una columna\n\ndata.Ciudad\n\n&lt;bound method Series.diff of 0              Guadalajara\n1        Santiago de Chile\n2                   Bogotá\n3             Buenos Aires\n4         Ciudad de México\n               ...        \n69995    Santiago de Chile\n69996               Bogotá\n69997          Guadalajara\n69998          Guadalajara\n69999         Buenos Aires\nName: Ciudad, Length: 70000, dtype: str&gt;\n\n\n\ndata[\"tienda\"]\n\n0        Tienda 4\n1        Tienda 6\n2        Tienda 3\n3        Tienda 1\n4        Tienda 5\n           ...   \n69995    Tienda 6\n69996    Tienda 3\n69997    Tienda 4\n69998    Tienda 4\n69999    Tienda 1\nName: tienda, Length: 70000, dtype: str\n\n\n\ndata[[\"tienda\", \"Ciudad\"]]\n\n\n\n\n\n\n\n\ntienda\nCiudad\n\n\n\n\n0\nTienda 4\nGuadalajara\n\n\n1\nTienda 6\nSantiago de Chile\n\n\n2\nTienda 3\nBogotá\n\n\n3\nTienda 1\nBuenos Aires\n\n\n4\nTienda 5\nCiudad de México\n\n\n...\n...\n...\n\n\n69995\nTienda 6\nSantiago de Chile\n\n\n69996\nTienda 3\nBogotá\n\n\n69997\nTienda 4\nGuadalajara\n\n\n69998\nTienda 4\nGuadalajara\n\n\n69999\nTienda 1\nBuenos Aires\n\n\n\n\n70000 rows × 2 columns"
+  },
+  {
+    "objectID": "proyectos/animacion_mes.html",
+    "href": "proyectos/animacion_mes.html",
+    "title": "Gráfica animada de ventas",
+    "section": "",
+    "text": "Este proyecto muestra como se pueden visualizar periodos de ventas para presentaciones ejecutivas"
   }
 ]

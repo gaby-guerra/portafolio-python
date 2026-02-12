@@ -114,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -154,7 +154,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">🎯 Objetivo</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">📊 Dataset</a>
+  <ul class="collapse">
+  <li><a href="#vista-previa-de-los-datos" id="toc-vista-previa-de-los-datos" class="nav-link" data-scroll-target="#vista-previa-de-los-datos">Vista previa de los datos</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -179,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">🎯 Objetivo</h2>
-<p>Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante técnicas de limpieza de datos, análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos utilizando Python.</p>
+<p>Analizar registros históricos de avistamientos de objetos voladores no identificados (UFOs) mediante análisis exploratorio y visualización, con el fin de identificar patrones temporales y geográficos.</p>
 </section>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">📊 Dataset</h2>
@@ -196,20 +208,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Descripción del testigo</li>
 </ul></li>
 </ul>
-<p>El dataset contiene reportes voluntarios recopilados a lo largo de varias décadas, por lo que fue necesario realizar procesos de limpieza y normalización antes del análisis.</p>
+<!-- El dataset contiene reportes voluntarios recopilados a lo largo de varias
+décadas, por lo que fue necesario realizar procesos de limpieza y
+normalización antes del análisis.
+-->
+<p>Se detectaron tipos mixtos en columnas numéricas. Es posible realizar la limpieza explícita y conversión controlada de datos. Usando la siguiente sintaxys</p>
+<div id="4f7abc1e" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"duration (seconds)"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"duration (seconds)"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"latitude"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"latitude"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <section id="vista-previa-de-los-datos" class="level3">
 <h3 class="anchored" data-anchor-id="vista-previa-de-los-datos">Vista previa de los datos</h3>
-<div id="d1900315" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"../data/ufo.csv"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\gabyg\AppData\Local\Temp\ipykernel_16248\2015269378.py:3: DtypeWarning: Columns (0: duration (seconds), 1: latitude) have mixed types. Specify dtype option on import or set low_memory=False.
-  df = pd.read_csv("../data/ufo.csv")</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div id="a11713d4" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
@@ -238,11 +249,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>tx</td>
 <td>us</td>
 <td>cylinder</td>
-<td>2700</td>
+<td>2700.0</td>
 <td>45 minutes</td>
 <td>This event took place in early fall around 194...</td>
 <td>4/27/2004</td>
-<td>29.8830556</td>
+<td>29.883056</td>
 <td>-97.941111</td>
 </tr>
 <tr class="even">
@@ -252,11 +263,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>tx</td>
 <td>NaN</td>
 <td>light</td>
-<td>7200</td>
+<td>7200.0</td>
 <td>1-2 hrs</td>
 <td>1949 Lackland AFB&amp;#44 TX.&nbsp;&nbsp;Lights racing acros...</td>
 <td>12/16/2005</td>
-<td>29.38421</td>
+<td>29.384210</td>
 <td>-98.581082</td>
 </tr>
 <tr class="odd">
@@ -266,11 +277,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>NaN</td>
 <td>gb</td>
 <td>circle</td>
-<td>20</td>
+<td>20.0</td>
 <td>20 seconds</td>
 <td>Green/Orange circular disc over Chester&amp;#44 En...</td>
 <td>1/21/2008</td>
-<td>53.2</td>
+<td>53.200000</td>
 <td>-2.916667</td>
 </tr>
 <tr class="even">
@@ -280,11 +291,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>tx</td>
 <td>us</td>
 <td>circle</td>
-<td>20</td>
+<td>20.0</td>
 <td>1/2 hour</td>
 <td>My older brother and twin sister were leaving ...</td>
 <td>1/17/2004</td>
-<td>28.9783333</td>
+<td>28.978333</td>
 <td>-96.645833</td>
 </tr>
 <tr class="odd">
@@ -294,11 +305,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>hi</td>
 <td>us</td>
 <td>light</td>
-<td>900</td>
+<td>900.0</td>
 <td>15 minutes</td>
 <td>AS a Marine 1st Lt. flying an FJ4B fighter/att...</td>
 <td>1/22/2004</td>
-<td>21.4180556</td>
+<td>21.418056</td>
 <td>-157.803611</td>
 </tr>
 </tbody>

@@ -1,0 +1,97 @@
+---
+title: "Análisis de Ventas — Ranking Anual"
+format:
+  html:
+    toc: true
+    theme: cosmo
+execute:
+  echo: false
+---
+
+Este proyecto analiza ventas en dólares durante tres años,
+con un Ranking anual animado por tienda
+
+“Hallazgos clave”
+
+* La tienda 4 lidero en 2022 y 2023, mientras que la tienda 6 lidero en 2026
+* La tienda 6 fue la de menores ventas en 2022 y supero a todas en 2026
+* La tienda 2 es la que menores ganancias esta produciendo
+
+
+```{python}
+import pandas as pd
+import plotly.express as px
+
+data = pd.read_excel("../data/ventas.xlsx")
+
+data.head()
+
+# 1) Tomar de la fecha el anio
+data['anio'] = pd.to_datetime(data['fecha']).dt.year
+
+# 2) Ventas anuales por tienda
+anual = (
+    data.groupby(['tienda', 'anio'], as_index=False)['precio']
+        .sum()
+)
+
+# 3) Gráfica ranking anual
+graf = px.bar(
+    anual,
+    x='precio',
+    y='tienda',
+    color='tienda',
+    text='precio',
+    animation_frame='anio',
+    range_x=[0, anual['precio'].max() * 1.15],
+    labels={
+        'anio': 'Año',
+        'precio': 'Ventas (USD)',
+        'tienda': 'Tienda'
+    }
+)
+
+# 4) Formato: USD + separador de miles (ej: $12,345)
+graf.update_traces(texttemplate='$%{x:,.0f}', textposition='outside')
+
+# 5) Eje X con separador de miles también
+graf.update_xaxes(tickformat='$,.0f')
+
+# 6) Ranking dinámico: orden por valor del frame
+graf.update_layout(yaxis={'categoryorder': 'total ascending'})
+
+# Pausas anuales
+graf.update_layout(
+    updatemenus=[{
+        "buttons": [{
+            "args": [
+                None,
+                {
+                    "frame": {"duration": 3000, "redraw": True},
+                    "transition": {"duration": 500},
+                    "fromcurrent": True
+                }
+            ],
+            "method": "animate"
+        }]
+    }]
+)
+
+#título dinámico
+graf.update_layout(
+    title={
+        'text': "Ventas por Tienda",
+        'x': 0.5,
+        'xanchor': 'center'
+    }
+)
+
+for frame in graf.frames:
+    frame.layout = {
+        "title_text": f"Ventas por Tienda — Año {frame.name}"
+    }
+
+graf.show()
+```
+
+
