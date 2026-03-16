@@ -37,6 +37,13 @@ con enfoque académico y reproducible.
 <span>Estadística descriptiva y gráficos con Python</span>
 </a>
 -->
+<!-- 
+<a class="project-btn" href="proyectos/k-means.ipynb">
+proyectos/k-means.ipynb
+<strong>Similitudes kMeans</strong><br/>
+<span>Ejemplo kMeans usando titanic</span>
+</a>
+-->
 
 </div>
 
