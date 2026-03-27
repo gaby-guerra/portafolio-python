@@ -4,11 +4,9 @@ title: "Portafolio Python"
 
 ## 👋 Bienvenid@s
 
-Este es un **portafolio escolar** desarrollado como parte de la  
-**Maestría en Ciencia de Datos Aplicada**.
+**Portafolio Python**
 
-Aquí documento proyectos en **Python**, análisis de datos y visualizaciones,
-con enfoque académico y reproducible.
+Aquí documento proyectos en **Python** reproducibles.
 
 ---
 
